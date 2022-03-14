@@ -55,8 +55,20 @@ public class Powerup : MonoBehaviour
 
     private void OnPickUp(GameObject player)
     {
-        player.GetComponent<PekoPlayer>().PowerupPrefab = gameObject; // Assign the player this power up
-        gameObject.SetActive(false); // deactivate the powerup (not destroy it)
+
+        if(player.GetComponent<PekoPlayer>().PowerupPrefab == null)
+        {
+            player.GetComponent<PekoPlayer>().PowerupPrefab = gameObject;
+            gameObject.SetActive(false); // deactivate the powerup (not destroy it)
+        } 
+        else // if you already have a powerup, destroy it first then apply this powerup
+        {
+            Destroy(player.GetComponent<PekoPlayer>().PowerupPrefab);
+            player.GetComponent<PekoPlayer>().PowerupPrefab = gameObject;
+            gameObject.SetActive(false); // deactivate the powerup (not destroy it)
+        }
+
+
     }
 
     private void Gtfo()
