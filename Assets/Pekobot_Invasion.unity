@@ -436,6 +436,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3930791474964901003, guid: 8642df06853119a448b53f8d9545be02, type: 3}
+      propertyPath: powerupImage
+      value: 
+      objectReference: {fileID: 3256074668656379916, guid: 8642df06853119a448b53f8d9545be02, type: 3}
     - target: {fileID: 3256074668656379916, guid: 8642df06853119a448b53f8d9545be02, type: 3}
       propertyPath: m_Name
       value: carrot_powerup
@@ -446,7 +450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3256074668656379918, guid: 8642df06853119a448b53f8d9545be02, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.8908865
+      value: -4.64
       objectReference: {fileID: 0}
     - target: {fileID: 3256074668656379918, guid: 8642df06853119a448b53f8d9545be02, type: 3}
       propertyPath: m_LocalPosition.y

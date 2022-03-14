@@ -100,6 +100,7 @@ MonoBehaviour:
   spawnRateMultiplier: 1
   speed: 1
   duration: 5
+  powerupImage: {fileID: 3256074668656379916}
 --- !u!61 &5683928142606039758
 BoxCollider2D:
   m_ObjectHideFlags: 0

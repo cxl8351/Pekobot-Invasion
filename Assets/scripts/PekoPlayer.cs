@@ -9,6 +9,22 @@ public class PekoPlayer : MonoBehaviour
     [SerializeField] private GameObject playerImage;
     [SerializeField] private GameObject carrotShotPrefab;
     [SerializeField] public GameObject powerupPrefab;
+    [SerializeField] private float rateOfFire;
+    private float gunTimer;
+
+    public float RateOfFire
+    {
+        get
+        {
+            return rateOfFire;
+        }
+
+        set
+        {
+            rateOfFire = value;
+        }
+
+    }
 
     public GameObject PowerupPrefab
     {
@@ -164,9 +180,15 @@ public class PekoPlayer : MonoBehaviour
     /// </summary>
     private void Gun()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        gunTimer += Time.deltaTime;
+        if (Input.GetKey(KeyCode.Space))
         {
-            Instantiate(carrotShotPrefab, transform.position, playerImage.transform.rotation);
+            if (gunTimer >= rateOfFire)
+            {
+                Instantiate(carrotShotPrefab, transform.position, playerImage.transform.rotation);
+                gunTimer = 0;
+            }
+            
         }
         
     }

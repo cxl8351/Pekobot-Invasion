@@ -22,7 +22,7 @@ public class Carrot : MonoBehaviour
         Gtfo();
 
         timer += Time.deltaTime;
-        
+
     }
 
     private void GoPlaces()
@@ -37,6 +37,7 @@ public class Carrot : MonoBehaviour
 
         var carrotWidth = carrotImage.GetComponent<SpriteRenderer>().bounds.size.x;
         var carrotHeight = carrotImage.GetComponent<SpriteRenderer>().bounds.size.y;
+
 
         if (transform.position.x + (carrotWidth / 2) < minScreenBounds.x)
         {
